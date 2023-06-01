@@ -26,9 +26,7 @@ def prepare_cmd(
     if models:
         dbt_models = models
     else:
-        dbt_models = paths_to_dbt_models(paths, prefix, postfix)
-    print(dbt_models)
-    print(cmd_flags)    
+        dbt_models = paths_to_dbt_models(paths, prefix, postfix)   
     cmd = ["dbt", *global_flags, "compile", "-m", *dbt_models, *cmd_flags]
     return cmd
 
