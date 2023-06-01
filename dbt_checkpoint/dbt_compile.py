@@ -39,6 +39,9 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     add_dbt_cmd_model_args(parser)
 
     args = parser.parse_args(argv)
+    print(args.models)
+    import time
+    time.sleep(10)
 
     cmd = prepare_cmd(
         args.filenames,
