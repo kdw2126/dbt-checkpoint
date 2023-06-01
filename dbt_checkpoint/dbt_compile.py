@@ -33,7 +33,6 @@ def prepare_cmd(
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
     parser = argparse.ArgumentParser()
-    print(parser.parse_args(argv).__dict__)
     
     add_filenames_args(parser)
     add_dbt_cmd_args(parser)
